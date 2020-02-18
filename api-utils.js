@@ -8,7 +8,7 @@ let axiosInstance = axios.create({
   baseURL: API_URL,
 })
 
-function updateAxios() {
+function configAxios() {
   axiosInstance = axios.create({
     baseURL: API_URL,
   })
@@ -23,7 +23,7 @@ function getHeaders() {
 }
 
 export function post(url, data, headers = true) {
-  updateAxios()
+  configAxios()
   return axiosInstance({
     method: 'POST',
     url,
@@ -34,7 +34,7 @@ export function post(url, data, headers = true) {
 
 // delete is a reserved name
 export function del(url) {
-  updateAxios()
+  configAxios()
   return axiosInstance({
     method: 'DELETE',
     url,
@@ -53,7 +53,7 @@ export async function get(url) {
 }
 
 export function patch(url, data) {
-  updateAxios()
+  configAxios()
   return axiosInstance({
     method: 'PATCH',
     url,
