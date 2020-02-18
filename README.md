@@ -1,3 +1,3 @@
 # React Axios CRUD utils
 
-Create CRUD util methods to with with Axios
+Create CRUD util methods to work with Axios
